@@ -22,7 +22,7 @@ namespace Demo.Utils
                 yield return item;
         }
 
-        public static int BestIndex<T, TValue>(this IList<T> list, T value, Func<T, TValue> selector) 
+        static int BestIndex<T, TValue>(this IList<T> list, T value, Func<T, TValue> selector) 
             where TValue : IComparable<TValue>
         {
             return bestIndex(0, list.Count);
